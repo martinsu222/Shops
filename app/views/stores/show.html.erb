@@ -1,0 +1,110 @@
+<div>
+  <div>
+    <h1>
+      Store #<%= @the_store.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/stores">
+          Go back
+        </a>
+      </div>
+      
+
+    <dl>
+      <dt>
+        Title
+      </dt>
+      <dd>
+        <%= @the_store.title %>
+      </dd>
+
+      <dt>
+        Description
+      </dt>
+      <dd>
+        <%= @the_store.description %>
+      </dd>
+
+      <dt>
+        Location
+      </dt>
+      <dd>
+        <%= @the_store.location %>
+      </dd>
+
+      <dt>
+        Style
+      </dt>
+      <dd>
+        <%= @the_store.style %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_store.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_store.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit store
+    </h2>
+
+    <form action="/modify_store/<%= @the_store.id %>"  method="post" >
+      <div>
+        <label for="title_box">
+          Title
+        </label>
+
+        <input type="text" id="title_box" name="query_title" value="<%= @the_store.title %>">
+      </div>
+
+      <div>
+        <label for="description_box">
+          Description
+        </label>
+
+        <input type="text" id="description_box" name="query_description" value="<%= @the_store.description %>">
+      </div>
+
+      <div>
+        <label for="location_box">
+          Location
+        </label>
+
+        <input type="text" id="location_box" name="query_location" value="<%= @the_store.location %>">
+      </div>
+
+      <div>
+        <label for="style_box">
+          Style
+        </label>
+
+        <input type="text" id="style_box" name="query_style" value="<%= @the_store.style %>">
+      </div>
+
+      <button>
+        Update store
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
