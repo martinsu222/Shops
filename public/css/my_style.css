@@ -1,0 +1,31 @@
+
+body {
+  padding: 50px;
+}
+
+.pretty-button {
+  background-color: blue;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.success-button {
+  background-color: rgb(123, 255, 0);
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.danger-button {
+  background-color: rgb(255, 34, 0);
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.pretty-button:hover {
+  box-shadow: -1px -7px 48px -25px rgba(0,0,0,1) inset;
+  -webkit-box-shadow: -1px -7px 48px -25px rgba(0,0,0,1)inset;
+  -moz-box-shadow: -1px -7px 48px -25px rgba(0,0,0,1)inset;
+}
