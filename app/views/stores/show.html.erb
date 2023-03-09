@@ -14,7 +14,7 @@
 
     <dl>
       <dt>
-        Title
+        Name
       </dt>
       <dd>
         <%= @the_store.title %>
@@ -59,7 +59,7 @@
     <form action="/modify_store/<%= @the_store.id %>"  method="post" >
       <div>
         <label for="title_box">
-          Title
+          Name
         </label>
 
         <input type="text" id="title_box" name="query_title" value="<%= @the_store.title %>">
